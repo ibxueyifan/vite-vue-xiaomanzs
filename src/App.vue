@@ -1,11 +1,24 @@
 <template>
    <div class=''>
-      <GlobalData />
    </div>
 </template>
 
 <script setup lang='ts'>
-import GlobalData from './components/29GlobalData/index.vue';
+
+import { getCurrentInstance } from 'vue';
+const app = getCurrentInstance();
+app?.proxy?.xiaomanloading.show();
+
+setTimeout(() => {
+   app?.proxy?.xiaomanloading.hide()
+}, 1500)
+
+
+
+
+
+
+
 
 </script>
 

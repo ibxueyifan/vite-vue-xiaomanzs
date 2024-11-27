@@ -4,17 +4,28 @@ import App from './App.vue';
 
 import mitt from 'mitt';
 
+// 注意 xiaomanloading 这个名字几个地方要保持一致
+import xiaomanloading from '@/components/30Loading/index';
+
 const emitter = mitt();
 
 type Filter = {
     format<T>(str: T): string
 }
+
+type xiaomanloadingType = {
+    isShow: boolean,
+    show: () => void,
+    hide: () => void,
+}
+
 // declare module '@vue/runtime-core' {
 // declare module 'vue' {
 declare module '@vue/runtime-core' {
     interface ComponentCustomProperties {
         $Bus: typeof emitter;
-        $filter: Filter
+        $filter: Filter,
+        xiaomanloading: xiaomanloadingType
     }
 }
 
@@ -29,6 +40,9 @@ app.config.globalProperties.$filter = {
         return `${str}-xiaoman`
     }
 }
+
+
+app.use(xiaomanloading);
 
 
 app.component('GlobalCom', GlobalCom);
