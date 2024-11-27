@@ -1,0 +1,23 @@
+{
+  "name": "vite-vue-xiaomanzs",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "mitt": "^3.0.1",
+    "vue": "^3.5.12"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.3",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "typescript": "~5.6.2",
+    "unplugin-auto-import": "^0.18.5",
+    "vite": "^5.4.10",
+    "vue-tsc": "^2.1.8"
+  }
+}
