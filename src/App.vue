@@ -1,12 +1,11 @@
 <template>
    <div class=''>
-      <ImgLazy />
+      <GlobalData />
    </div>
 </template>
 
 <script setup lang='ts'>
-// 26
-import ImgLazy from './components/28ImgGlob/index.vue';
+import GlobalData from './components/29GlobalData/index.vue';
 
 </script>
 
