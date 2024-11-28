@@ -1,5 +1,6 @@
 <template>
    <div class=''>
+        全局data
        {{ $filter.format('zs') }}
    </div>
 </template>
