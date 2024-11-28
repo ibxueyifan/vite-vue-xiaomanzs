@@ -1,11 +1,11 @@
 <template>
    <div class=''>
-       <CssCom />
+       <EnvData />
    </div>
 </template>
 
 <script setup lang='ts'>
-import CssCom from '@/components/32PostCssCom/index.vue'
+import EnvData from '@/components/33EnvData/index.vue'
 </script>
 
 <style scoped lang='scss'>

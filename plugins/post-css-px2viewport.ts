@@ -10,7 +10,7 @@ type ViewPort = typeof defaultViewport;
  * @param options - 选项对象，包含视口宽度
  * @returns 一个PostCSS插件
  */
-export const PostCssPx2ViewPort = (options: ViewPort): Plugin => {
+export const PostCssPx2ViewPort = (options?: ViewPort): Plugin => {
 
     // 合并默认视口宽度和用户提供的选项
     const opts = Object.assign({}, defaultViewport, options);

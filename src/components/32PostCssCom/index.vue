@@ -15,11 +15,14 @@ import { useCssVar } from '@vueuse/core';
 
 const fontSize = useCssVar('--size');
 
-// const changeSize = (size: number) => {
-//     fontSize.value = `${size}px`;
-// }
-
 const changeSize = (size: number) => {
+
+    //方法1 fontSize.value = `${size}px`;
+
+    console.log(fontSize.value);
+    
+    
+    // 原理：
     document.documentElement.style.setProperty('--size', size + 'px');
     // 读取 document.documentElement.style.getPropertyValue('--size')
     console.log(document.documentElement.style.getPropertyValue('--size'));
