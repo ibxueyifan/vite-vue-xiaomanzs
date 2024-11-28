@@ -1,11 +1,14 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue';
-
 import mitt from 'mitt';
-
 // 注意 xiaomanloading 这个名字几个地方要保持一致
 import xiaomanloading from '@/components/30Loading/index';
+import { piniaPlugin } from './store/plugin';
+import { createPinia } from 'pinia';
+
+const store = createPinia();
+store.use(piniaPlugin())
 
 const emitter = mitt();
 
@@ -44,6 +47,7 @@ app.config.globalProperties.$filter = {
 
 app.use(xiaomanloading);
 
+app.use(store)
 
 app.component('GlobalCom', GlobalCom);
 
