@@ -23,6 +23,15 @@ export default ({ mode }: any) => {
       alias: {
         '@': path.resolve(__dirname, 'src')
       }
+    },
+    server: {
+      // dev环境才需要
+      proxy: {
+        'api': {
+          target: 'xx',
+          rewrite: (path)=>path.replace(/^\/api$/, '')
+        }
+      }
     }
   })
 }
